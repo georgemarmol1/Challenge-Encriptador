@@ -7,7 +7,7 @@ function selecion (elemento){
 var texto = selecion("#textoEncriptar");
 var datoscifrados = selecion("#textoencriptado");
 var botonencriptar = selecion("#encriptar");
-var copiar = selecionr("#btncopiar");
+var copiar = selecion("#btncopiar");
 var btndesencriptar = selecion("#desencriptar");
 var imagen = selecion("#imagenMuneco");
 var imagen2 = selecion("#imagen2");
