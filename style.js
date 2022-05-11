@@ -1,20 +1,19 @@
-var texto = document.querySelector("#textoEncriptar");
-var datoscifrados = document.querySelector("#textoencriptado");
-var botonencriptar = document.querySelector("#encriptar");
-var copiar = document.querySelector("#copiarTexto");
-var btndesencriptar = document.querySelector("#desencriptar");
 
-ocultar();
+function selecion (elemento){
+    var dato = document.querySelector(elemento);
+    return dato;
+}
+ 
+var texto = selecion("#textoEncriptar");
+var datoscifrados = selecion("#textoencriptado");
+var botonencriptar = selecion("#encriptar");
+var copiar = selecionr("#btncopiar");
+var btndesencriptar = selecion("#desencriptar");
+var imagen = selecion("#imagenMuneco");
+var imagen2 = selecion("#imagen2");
+var parra = selecion("#imagenMuneco2");
 
-
-function ocultar(){
-    document.getElementById('copiarTexto').style.display = 'none';
-    }
-
-function mostrar(){
-    document.getElementById('copiarTexto').style.display = 'block';
-    }
-
+//Funcionar para el boton encriptar
 botonencriptar.addEventListener("click", function(event){
     event.preventDefault();
     
@@ -26,16 +25,15 @@ botonencriptar.addEventListener("click", function(event){
         console.log(textoCifrado);
         datoscifrados.value = textoCifrado;
         texto.value = "";
-        var imagen = document.querySelector("#imagenMuneco");
-        imagen.classList.add("elementosacultos");
-        var mensaje = document.querySelector("#mensajeEncontrado");
-        mensaje.classList.add("elementosacultos");
-        datoscifrados.classList.add("posiciontareincriptada");
-        copiar.classList.add("copiarTexto");
-        mostrar();
+        imagen.setAttribute("id","ocultarimagen")
+        parra.setAttribute("id","ocultarimagen")
+        copiar.setAttribute("id","btncopiar2")
+        imagen2.setAttribute("id","mostrarimagen")
     }
 
 });
+
+//funcion para el boton desencriptar
 btndesencriptar.addEventListener("click", function(event){
     event.preventDefault();
     var datos = datoscifrados.value;
@@ -49,12 +47,19 @@ btndesencriptar.addEventListener("click", function(event){
 
 });
 
+//funcion para el boton copiar
 copiar.addEventListener("click", function(event){
     event.preventDefault();
     var content = datoscifrados;
-    
     content.select();
     document.execCommand('copy');
+    imagen.setAttribute("id","")
+    parra.setAttribute("id","")
+    copiar.setAttribute("id","btncopiar3")
+    imagen2.setAttribute("id","")
+    texto.value = datoscifrados.value;
+    datoscifrados.value = "";
+
 
 })
 
