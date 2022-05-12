@@ -4,8 +4,8 @@ body {
 }
 .principal{
   margin: 5% auto;
-  width: 70%;
-  height: 90%;
+  width: 65%;
+  height: 80%;
   background:  #CAEBF2 ;
   border-radius: 50px;
   box-shadow: -5px 3px 39px -3px rgba(79,77,77,0.74);
@@ -86,8 +86,8 @@ body {
   float: right;
   position:sticky;
   width: 400px;
-  margin-right: 3rem;
-  margin-top: -52%;
+  margin-right: 5rem;
+  margin-top: -47%;
   border-radius: 2rem;
   background: #ffffff;
   box-shadow: 10px 10px 5px 0px rgba(79,77,77,0.75);
@@ -227,5 +227,3 @@ body {
   }
 
 }
-
-
