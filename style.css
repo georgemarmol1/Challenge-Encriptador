@@ -79,24 +79,15 @@ body {
   cursor: pointer;
   
 }
-.botones button:nth-child(2):hover{
- 
-  transform: scale(1.2);
-  margin-right: 2rem;
-  transition: 1s all;
-}
-.botones button:nth-child(3):hover {
-  transform: scale(1.2);
-  margin-left: 2rem;
-  transition: 1s all;
-}
+
 
 .informacion {
  
   float: right;
-  margin-top: -45%;
-  margin-right: 4rem;
+  position:sticky;
   width: 400px;
+  margin-right: 3rem;
+  margin-top: -52%;
   border-radius: 2rem;
   background: #ffffff;
   box-shadow: 10px 10px 5px 0px rgba(79,77,77,0.75);
@@ -176,11 +167,7 @@ body {
   margin-left: 3rem;
   margin-bottom: 1rem;
 }
-#btncopiar2:hover{
-  transform: scale(1.2);
-  
-  transition: 1s all;
-}
+
 #btncopiar3{
   display: none;
 }
