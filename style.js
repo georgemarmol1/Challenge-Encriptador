@@ -17,19 +17,27 @@ var parra = selecion("#imagenMuneco2");
 botonencriptar.addEventListener("click", function(event){
     event.preventDefault();
     
+   
     var datos = texto.value;
-    if(datos.length != 0){
-        var textoCifrado = datos.replace(/e/gi, "enter")
-        .replace(/i/gi, "imes").
-        replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
-        console.log(textoCifrado);
-        datoscifrados.value = textoCifrado;
+    
+    if (new RegExp("[a-z]").test(texto.value)){
+        if(datos.length != 0){
+            var textoCifrado = datos.replace(/e/gi, "enter")
+            .replace(/i/gi, "imes").
+            replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+            datoscifrados.value = textoCifrado;
+            texto.value = "";
+            imagen.setAttribute("id","ocultarimagen")
+            parra.setAttribute("id","ocultarimagen")
+            copiar.setAttribute("id","btncopiar2")
+            imagen2.setAttribute("id","mostrarimagen")
+        }
+      }
+      else{
+        alert("Solo se adminiten letras minisculas");
         texto.value = "";
-        imagen.setAttribute("id","ocultarimagen")
-        parra.setAttribute("id","ocultarimagen")
-        copiar.setAttribute("id","btncopiar2")
-        imagen2.setAttribute("id","mostrarimagen")
-    }
+      }
+       
 
 });
 
@@ -62,5 +70,8 @@ copiar.addEventListener("click", function(event){
 
 
 })
+
+
+
 
 
